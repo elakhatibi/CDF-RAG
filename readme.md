@@ -17,7 +17,7 @@ CDF-RAG is a novel framework for Retrieval-Augmented Generation (RAG) that incor
 
 ## 🏗️ Project Structure
 
-cdf-rag/ ├── src/ # Core modules (retriever, generator, rl, graph) ├── scripts/ # Training and evaluation entry points ├── configs/ # YAML configs for experiments ├── notebooks/ # Jupyter demos ├── data/ # Placeholder for datasets ├── requirements.txt ├── README.md └── LICENSE
+cdf-rag/ ├── src/ # Core modules (retriever, generator, rl, graph) ├── scripts/ # Training and evaluation entry points ├── configs/ # YAML configs for experiments ├── notebooks/ # Jupyter demos ├── data/ # for datasets ├── requirements.txt ├── README.md └── LICENSE
 
 
 ---
