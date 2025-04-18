@@ -5,8 +5,6 @@
 📄 [arXiv:2504.12560](https://arxiv.org/abs/2504.12560)  
 \* Equal contribution
 
-
-
 ---
 
 ## 🧠 Abstract
@@ -72,40 +70,17 @@ The CDF-RAG framework is composed of:
 
 ## 📈 Key Results
 
-### 🔬 Table 1: QA Performance
+### 🔍 Table: Ablation Study
 
-| Model         | PubMedQA | HotpotQA | NarrativeQA |
-|---------------|----------|----------|--------------|
-| Vanilla RAG   | 66.8     | 58.2     | 40.3          |
-| ReAct         | 67.1     | 60.5     | 41.2          |
-| BoT           | 66.7     | 59.9     | 41.1          |
-| **CDF-RAG**   | **69.4** | **63.6** | **43.5**      |
+We report the main ablation results of CDF-RAG below. For full quantitative results across 4 datasets and 4 LLMs, refer to the [paper](https://arxiv.org/abs/2504.12560).
 
-CDF-RAG outperforms all RAG baselines across biomedical, open-domain, and long-form QA.
-
----
-
-### ⚙️ Table 2: Ablation Study
-
-| Setting                      | PubMedQA | HotpotQA | NarrativeQA |
-|-----------------------------|----------|----------|-------------|
-| – causal reward             | 67.5     | 61.3     | 42.1        |
-| – semantic alignment        | 67.9     | 61.5     | 42.4        |
-| – hallucination detection   | 68.2     | 61.9     | 42.5        |
-| **Full CDF-RAG (ours)**     | **69.4** | **63.6** | **43.5**    |
-
-CDF-RAG benefits from all reward components, showing the value of causal and semantic alignment.
-
----
-
-### 🎯 Figure: Reward Contributions & Retrieval Quality
-
-> If saved as PNG, embed with:
-
-![CDF-RAG Ablation Plot](figs/cdf_ablation_study_compact.png)
-
-- Training with causal chain depth, hallucination penalty, and SRS increases retrieval and reasoning quality.
-- Retrieval improves over epochs — even without ground truth supervision.
+| Ablation Stage                          | CRC   | CCD  | SRS  | Groundedness | HR   | F1   |
+|----------------------------------------|-------|------|------|---------------|------|------|
+| Baseline RAG                           | 0.74  | 1.50 | 0.55 | 0.52          | 0.18 | 0.68 |
+| + RL-based Query Refinement            | 0.80  | 1.70 | 0.62 | 0.59          | 0.14 | 0.74 |
+| + Causal Graph                         | 0.84  | 1.92 | 0.65 | 0.63          | 0.12 | 0.78 |
+| + Rewriter                             | 0.88  | 2.00 | 0.70 | 0.68          | 0.08 | 0.82 |
+| + **Hallucination Correction (Ours)**  | 0.89  | 2.02 | 0.74 | 0.71          | 0.07 | 0.86 |
 
 ---
 
