@@ -5,12 +5,9 @@ from retrieval.document_causal_retriever_rl import AdaptiveRetrieverAgent
 from models.knowledge_rewriter_rl import KnowledgeRewritingAgent
 from models.llm_inference_rl import LLMResponseAgent
 from models.hallucination_detector_rl import HallucinationCorrectionAgent
-from utils.logger import setup_logger
-
-logger = setup_logger()
 
 def main(query: str):
-    logger.info("Initializing CDF-RAG pipeline with LangGraph and RL")
+    print("Initializing CDF-RAG pipeline with LangGraph and RL")
     
     # Define LangGraph workflow
     graph = StateGraph()
