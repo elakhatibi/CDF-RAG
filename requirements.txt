@@ -13,6 +13,8 @@ accelerate
 peft
 bitsandbytes
 trl
+retrieval
+pinecone
 
 # Neo4j and Graph Tools
 py2neo
